@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.7335, 35.5433]
+      },
+      "properties": {
+        "name": "Mount Arbel",
+        "category": "Landmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.245036799419296, 34.840847271173715]
+      },
+      "properties": {
+        "name": "Tel Be’er Sheba",
+        "category": "Tel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.764108929236397, 35.20623759892468]
+      },
+      "properties": {
+        "name": "Jerusalem",
+        "category": "City"
+      }
+    }
+  ]
+}
