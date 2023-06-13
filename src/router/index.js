@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import GoogleMap from '../views/GoogleMap.vue';
 import MapView from '../views/MapView.vue';
+import SidePanelView from '../views/SidePanelView.vue';
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/map',
     name: 'map',
     component: MapView,
+  },
+  {
+    path: '/sidepanel',
+    name: 'sidepanel',
+    component: SidePanelView,
   },
 ];
 

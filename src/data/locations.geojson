@@ -9,7 +9,9 @@
       },
       "properties": {
         "name": "Mount Arbel",
-        "category": "Landmark"
+        "category": "Landmark",
+        "period": "Iron Age II",
+        "history": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."
       }
     },
     {
@@ -20,7 +22,9 @@
       },
       "properties": {
         "name": "Tel Be’er Sheba",
-        "category": "Tel"
+        "category": "Tel",
+        "period": "Bronze Age III",
+        "history": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."
       }
     },
     {
@@ -31,7 +35,9 @@
       },
       "properties": {
         "name": "Jerusalem",
-        "category": "City"
+        "category": "City",
+        "period": "Roman",
+        "history": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."
       }
     }
   ]
