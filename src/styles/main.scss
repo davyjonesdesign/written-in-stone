@@ -1,30 +1,74 @@
-/* Primary: California */
-$primary-100: #FFFBF2;
-$primary-200: #FFEBC5;
-$primary-300: #FCD396;
-$primary-400: #F4B366;
-$primary-500: #E68B37;
-$primary-600: #B65A17;
-$primary-700: #863709;
-$primary-800: #561D04;
-$primary-900: #260B02;
-/* Accent: The Oregon Blue */
-$accent-100: #F2F6FF;
-$accent-200: #C7DAFF;
-$accent-300: #99C0FB;
-$accent-400: #6BA9F2;
-$accent-500: #3D91E0;
-$accent-600: #1B72B2;
-$accent-700: #0C5883;
-$accent-800: #063D55;
-$accent-900: #031D26;
 /* Neutral */
-$neutral-100: #FCFCFA;
-$neutral-200: #F0EEEC;
-$neutral-300: #E3E1DD;
-$neutral-400: #D6D3CF;
-$neutral-500: #C9C5C1;
-$neutral-600: #A19C98;
-$neutral-700: #78736F;
-$neutral-800: #4F4B48;
-$neutral-900: #262322;
+$neutral-50: #faf7f6;
+$neutral-100: #eee7e5;
+$neutral-200: #d3c7c3;
+$neutral-300: #c1b6b2;
+$neutral-400: #a9a19e;
+$neutral-500: #8f8684;
+$neutral-600: #6e6562;
+$neutral-700: #58504f;
+$neutral-800: #3f3a39;
+$neutral-900: #221f1f;
+
+/* Primary: Limestone */
+$primary-50: #FDF8EC;
+$primary-100: #F4EBD4;
+$primary-200: #F0E1BA;
+$primary-300: #E4D2A3;
+$primary-400: #D9C48D;
+$primary-500: #C5AC6D;
+$primary-600: #B59C5B;
+$primary-700: #A58C4B;
+$primary-800: #967B37;
+$primary-900: #76622F;
+
+/* Accent: Ocean */
+$accent-50: #CFD9F8;
+$accent-100: #B5C4F1;
+$accent-200: #9CAFEA;
+$accent-300: #8095D6;
+$accent-400: #657AB9;
+$accent-500: #5064A0;
+$accent-600: #405288;
+$accent-700: #2B3B6A;
+$accent-800: #1B284E;
+$accent-900: #0B132B; 
+
+/* Accent 2: Clay */
+$clay-50: #F4E4DE;
+$clay-100: #F2D2C8;
+$clay-200: #EFBEAF;
+$clay-300: #F5AD96;
+$clay-400: #EF987E;
+$clay-500: #ED8767;
+$clay-600: #EE7752;
+$clay-700: #E55B30;
+$clay-800: #DE481A;
+$clay-900: #C93000;
+
+/* Accent 3: Dirt */
+$dirt-50: #feeee0;
+$dirt-100: #dfc8b6;
+$dirt-200: #cab098;
+$dirt-300: #bf9e83;
+$dirt-400: #a07953;
+$dirt-500: #906643;
+$dirt-600: #744b29;
+$dirt-700: #623713;
+$dirt-800: #49260a;
+$dirt-900: #2e1704;
+
+/* Accent 4: Earth */
+$earth-50: #DEF7EB;
+$earth-100: #BFEDD6;
+$earth-200: #A5DDC2;
+$earth-300: #89C3A7;
+$earth-400: #77B094;
+$earth-500: #6EA088;
+$earth-600: #608B76;
+$earth-700: #517664;
+$earth-800: #3E5F4F;
+$earth-900: #345344;
+
+/* Transition */
+$trans: ease-in-out 0.15s;

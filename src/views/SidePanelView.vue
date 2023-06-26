@@ -6,17 +6,21 @@
       :zoom="zoom"
       :class="{ 'shifted': !showSidePanel }"
       >
-        <l-tile-layer url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"></l-tile-layer>
+        <l-tile-layer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}.png"></l-tile-layer>
         <l-marker
           v-for="(marker, index) in markers"
           :key="index"
           :lat-lng="marker.latLng"
           @click="selectMarker(marker)"
         >
-          <l-icon :icon-url="marker.icon" :icon-size="[26, 39]" :icon-anchor="[13, 19.5]"></l-icon>
+          <l-icon :icon-url="marker.icon" :icon-size="[36, 54]" :icon-anchor="[18, 54]"></l-icon>
         </l-marker>
       </l-map>
     </div>
+    <img
+      src="@/assets/wis-logo.svg"
+      alt="Written in Stone Logo"
+      class="wis-logo" />
     <transition name="slide">
       <div class="side-panel-wrapper" :class="{ 'slide-in': showSidePanel }">
         <button class="side-panel-toggler" @click="toggleSidePanel">&#9650; &#9660;</button>
@@ -24,9 +28,15 @@
           :selected-marker="selectedMarker"
           :markers="markers"
           @select-marker="selectMarker" />
-
+          <button
+            class="deselect-marker-button"
+            v-if="selectedMarker"
+            @click="deselectMarker"
+          >&#10539;</button>
       </div>
     </transition>
+    <MarkLegend/>
+
   </div>
 </template>
 
@@ -41,15 +51,17 @@ import landmarkIcon from '@/assets/icons/landmark-pin.svg';
 import cityIcon from '@/assets/icons/city-pin.svg';
 import telIcon from '@/assets/icons/tel-pin.svg';
 import SidePanel from '@/components/SidePanel.vue';
+import MarkLegend from '@/components/MarkLegend.vue';
 
 export default {
-  name: 'MapView',
+  name: 'SidePanelView',
   components: {
     LMap,
     LIcon,
     LMarker,
     LTileLayer,
     SidePanel,
+    MarkLegend,
   },
 
   setup() {
@@ -62,16 +74,20 @@ export default {
 
     const deselectMarker = () => {
       selectedMarker.value = null;
-      mapCenter.value = originalMapCenter;
+      // showSidePanel.value = true;
+      zoom.value = 8;
+      mapCenter.value = originalMapCenter.value;
     };
 
     const selectMarker = (marker) => {
-      selectedMarker.value = marker === selectedMarker.value ? null : marker;
-      showSidePanel.value = false;
-      const [latitude, longitude] = marker.latLng;
-      const zoomFactor = 2 ** (zoom.value - 1.5); // Adjust the zoom factor as needed
-      const shiftedLongitude = longitude + (0.4 / zoomFactor);
-      mapCenter.value = [latitude, shiftedLongitude];
+      if (marker && marker !== selectedMarker.value) {
+        selectedMarker.value = marker;
+        showSidePanel.value = false;
+        const [latitude, longitude] = marker.latLng;
+        const zoomFactor = 2 ** (zoom.value - 5.5); // Adjust the zoom factor as needed
+        const shiftedLongitude = longitude + (6 / zoomFactor);
+        mapCenter.value = [latitude, shiftedLongitude];
+      }
     };
 
     const toggleSidePanel = () => {
@@ -116,96 +132,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('@/styles/main.scss');
-
-.sidePanel-toggler {
-  position: relative;
-  z-index: 1000;
-}
-
-.home {
-  width: 100%;
-  height: 100%;
-}
-
-.map-wrapper {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  transition: transform 0.3s ease-in-out;
-}
-
-.leaflet-container {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-}
-.shifted {
-  width: 60vw;
-  & .leaflet-container {
-    width: 60vw;
-  }
-}
-
-.leaflet-marker-icon {
-  transition: 0.2s ease-in-out;
-}
-.leaflet-marker-icon:hover {
-  filter: drop-shadow(0 -2px 3px rgb(0, 0, 0, 0.8));
-
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease-in-out;
-}
-
-.slide-enter {
-  transform: translateX(100%);
-}
-
-.slide-leave-to {
-  transform: translateX(100%);
-}
-
-.side-panel-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0px;
-  height: 100%;
-  background-color: rgb(229, 229, 229);
-  width: 40vw;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-  & .side-panel {
-    display: flex;
-    overflow-y: scroll;
-    height: 100%;
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-& .side-panel-toggler {
-    position: absolute;
-    top: calc(50vh - 10px);
-    left: -33px;
-    transform: rotate(-90deg);
-  }
-}
-.close-details {
-  position: fixed;
-  top: 10px;
-  right: 15px;
-  z-index: 1000;
-}
-.slide-in {
-  transform: translateX(100%);
-}
-
-.side-panel-open .side-panel-wrapper {
-  transform: translateX(100%);
-}
+@import '@/styles/main.scss';
+@import '@/styles/sidepanel.scss';
+@import '@/styles/footer.scss';
 </style>
