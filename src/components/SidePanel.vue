@@ -219,7 +219,6 @@ export default {
       ];
     },
     filteredMarkers() {
-      // Apply search query and category filter to the markers
       const query = this.searchQuery.toLowerCase();
       const category = this.filterCategory.toLowerCase();
       const period = this.filterPeriod.toLowerCase();
@@ -239,14 +238,21 @@ export default {
           return false;
         });
 
-        // Filter by category
+        // Filter by category and period
         const categoryMatch = category === '' || markerProperties.category.toLowerCase() === category;
         const periodMatch = period === '' || markerProperties.period.toLowerCase() === period;
 
-        // Return true if any property or array matches the search query and category matches
         return match && categoryMatch && periodMatch;
-      });
+      }).reduce((uniqueMarkers, marker) => {
+        // Deduplicate the markers based on their keys
+        const existingMarker = uniqueMarkers.find((m) => m.key === marker.key);
+        if (!existingMarker) {
+          uniqueMarkers.push(marker);
+        }
+        return uniqueMarkers;
+      }, []);
     },
+
     categories() {
       // Get unique categories from the markers
       return [...new Set(this.markers.map((marker) => marker.properties.category))];
