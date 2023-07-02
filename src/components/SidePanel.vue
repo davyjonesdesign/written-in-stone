@@ -1,3 +1,5 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
+<!-- eslint-disable max-len -->
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <template>
   <div class="side-panel">
@@ -14,6 +16,15 @@
               class="cat-icon" />
           </div>
           <p class="label">{{ selectedMarker.properties.category }}</p>
+        </div>
+        <div class="category-wrapper">
+          <div class="cat-icon-wrapper">
+            <img
+              :src="getIconUrl(selectedMarker.properties.period)"
+              alt="category icon"
+              class="cat-icon" />
+          </div>
+          <p class="label">{{ selectedMarker.properties.period }}</p>
         </div>
         <div class="tabs">
           <button
@@ -35,12 +46,16 @@
         <h6 class="img-caption">Image from Wikimedia Commons</h6>
         <div v-for="section in sections" :id="section.id" :key="section.id" class="entry-section">
           <h6>{{ section.title }}</h6>
-          <p>{{ selectedMarker.properties[section.property] }}</p>
-          <p>{{ selectedMarker.properties[section.property] }}</p>
-          <p>{{ selectedMarker.properties[section.property] }}</p>
+          <!-- <p>{{ selectedMarker.properties[section.property] }}</p> -->
+          <ul class="entry-list">
+            <li
+            class="entry-list-item"
+            :key="item.id"
+            :id="item.id"
+            v-for="item in selectedMarker.properties[section.property]"
+          >{{ item }}</li>
+          </ul>
         </div>
-        <h6>Citations</h6>
-        {{ selectedMarker.properties.citations }}
       </div>
       <!-- <button class="close-details" @click="deselectMarker">&#10539;</button> -->
     </div>
@@ -59,7 +74,24 @@
           <img src="@/assets/icons/magnifying.svg" alt="Search Icon" class="search-icon" />
         </div>
 
-        <!-- select dropdown -->
+        <!-- period dropdown -->
+        <div class="dropdown-box">
+          <select id="categorySelect" v-model="filterPeriod" class="dropdown-select">
+            <option value="">All Periods</option>
+            <option v-for="period in periods" :value="period" :key="period">
+              {{ period }}
+            </option>
+          </select>
+          <div  v-if="filterPeriod" @click="clearPeriod">
+            <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
+          </div>
+          <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </div>
+        </div>
+        <!-- category dropdown -->
         <div class="dropdown-box">
           <select id="categorySelect" v-model="filterCategory" class="dropdown-select">
             <option value="">All Categories</option>
@@ -67,6 +99,9 @@
               {{ category }}
             </option>
           </select>
+          <div  v-if="filterCategory" @click="clearCategory">
+            <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
+          </div>
           <div class="arrow-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M7 10l5 5 5-5z" />
@@ -111,6 +146,13 @@
               </div>
             </div>
           </div>
+          <div class="search-query" v-if="searchQuery">
+              <!-- <p class="search-query-text">"{{ getMatchedProperty(marker) }}"</p> -->
+              <p
+              v-if="searchQuery && getMatchedProperty(marker)"
+              class="search-query-text" v-html="getMatchedProperty(marker)"></p>
+
+            </div>
           <div class="hr"></div>
         </li>
       </ul>
@@ -125,6 +167,7 @@
 import landmarkIcon from '@/assets/icons/landmark.svg';
 import cityIcon from '@/assets/icons/city.svg';
 import telIcon from '@/assets/icons/tel.svg';
+import histIcon from '@/assets/icons/history.svg';
 
 export default {
   name: 'SidePanel',
@@ -142,6 +185,7 @@ export default {
     return {
       searchQuery: '',
       filterCategory: '',
+      filterPeriod: '',
       activeTabIndex: 0,
     };
   },
@@ -156,7 +200,7 @@ export default {
       if (category === 'Tel') {
         return telIcon;
       }
-      return null;
+      return histIcon;
     };
 
     return {
@@ -171,33 +215,45 @@ export default {
         { id: 'history', title: 'History', property: 'history' },
         { id: 'archaeology', title: 'Archaeology', property: 'archaeology' },
         { id: 'scripture', title: 'Scripture', property: 'scripture' },
+        { id: 'citations', title: 'Citations', property: 'citations' },
       ];
     },
     filteredMarkers() {
       // Apply search query and category filter to the markers
       const query = this.searchQuery.toLowerCase();
       const category = this.filterCategory.toLowerCase();
+      const period = this.filterPeriod.toLowerCase();
 
       return this.markers.filter((marker) => {
         const markerProperties = marker.properties;
         const markerKeys = Object.keys(markerProperties);
 
-        // Check if any of the properties match the search query
+        // Check if any of the properties or arrays contain a match with the search query
         const match = markerKeys.some((key) => {
           const value = markerProperties[key];
-          return typeof value === 'string' && value.toLowerCase().includes(query);
+          if (typeof value === 'string') {
+            return value.toLowerCase().includes(query);
+          } if (Array.isArray(value)) {
+            return value.some((item) => item.toLowerCase().includes(query));
+          }
+          return false;
         });
 
         // Filter by category
         const categoryMatch = category === '' || markerProperties.category.toLowerCase() === category;
+        const periodMatch = period === '' || markerProperties.period.toLowerCase() === period;
 
-        // Return true if any property matches the search query and category matches
-        return match && categoryMatch;
+        // Return true if any property or array matches the search query and category matches
+        return match && categoryMatch && periodMatch;
       });
     },
     categories() {
       // Get unique categories from the markers
       return [...new Set(this.markers.map((marker) => marker.properties.category))];
+    },
+    periods() {
+      // Get unique periods from the markers
+      return [...new Set(this.markers.map((marker) => marker.properties.period))];
     },
   },
   methods: {
@@ -217,6 +273,75 @@ export default {
         this.activeTabIndex = index;
       }
     },
+    shouldShowSearchQuery(marker) {
+      const query = this.searchQuery.toLowerCase();
+      const markerProperties = marker.properties;
+      const markerKeys = Object.keys(markerProperties);
+
+      // Check if any of the properties or arrays contain a match with the search query
+      return markerKeys.some((key) => {
+        const value = markerProperties[key];
+        if (typeof value === 'string') {
+          return value.toLowerCase().includes(query);
+        } if (Array.isArray(value)) {
+          return value.some((item) => item.toLowerCase().includes(query));
+        }
+        return false;
+      });
+    },
+    getMatchedProperty(marker) {
+      const propertyValues = Object.values(marker.properties);
+      const query = this.searchQuery.toLowerCase();
+
+      const matchedValue = propertyValues.find((value) => {
+        if (typeof value === 'string' && value.toLowerCase().includes(query)) {
+          return true;
+        }
+        if (Array.isArray(value)) {
+          return value.some((item) => typeof item === 'string' && item.toLowerCase().includes(query));
+        }
+        return false;
+      });
+
+      if (matchedValue) {
+        const processValue = (value) => {
+          const valueString = typeof value === 'string' ? value.toLowerCase() : '';
+          const startIndex = valueString.indexOf(query);
+          const endIndex = startIndex + query.length;
+          const beforeMatch = value.slice(0, startIndex);
+          const matchedText = value.slice(startIndex, endIndex);
+          const afterMatch = value.slice(endIndex);
+
+          const truncatedBefore = beforeMatch.length > 10 ? `...${beforeMatch.slice(-10)}` : beforeMatch;
+          const truncatedAfter = afterMatch.length > 10 ? `${afterMatch.slice(0, 10)}...` : afterMatch;
+
+          return `${truncatedBefore}<b>${matchedText}</b>${truncatedAfter}`;
+        };
+
+        if (typeof matchedValue === 'string') {
+          return processValue(matchedValue);
+        } if (Array.isArray(matchedValue)) {
+          const processedArray = matchedValue.map((item) => {
+            if (typeof item === 'string') {
+              return processValue(item);
+            }
+            return item;
+          });
+          return processedArray;
+        }
+      }
+
+      return null;
+    },
+    clearPeriod() {
+      this.filterCategory = ''; // Clear the selected value
+      this.filterPeriod = ''; // Clear the selected value
+    },
+    clearCategory() {
+      this.filterPeriod = ''; // Clear the selected value
+      this.filterCategory = ''; // Clear the selected value
+    },
+
   },
 };
 </script>
