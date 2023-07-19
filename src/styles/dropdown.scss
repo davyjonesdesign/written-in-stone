@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   transition: ease-in-out .2s;
   cursor: pointer;
   }
@@ -15,7 +15,7 @@
   cursor: pointer;
   height: 40px;
   padding: 5px 0 4px 15px;
-  border: 2px solid $accent-700;
+  border: 1px solid $accent-700;
   border-radius: 4px;
   background: $neutral-100;
   color: $neutral-700;

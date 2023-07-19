@@ -9,7 +9,7 @@
 /* width */
 ::-webkit-scrollbar {
   background: $primary-400;
-  border-left: 2px solid $neutral-800;
+  border-left: 1px solid $neutral-600;
   // border-radius: 5px;
   width: 12px;
 }
@@ -22,7 +22,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border: 1px solid $neutral-900;
+  border: 1px solid $neutral-600;
   background: $primary-700;
   border-radius: 5px;
 }
@@ -92,7 +92,7 @@ select {
   }
   & .leaflet-bar a:first-child, .leaflet-bar a:last-child {
     margin: 0 0 10px;
-    border: 2px solid $neutral-600;
+    border: 1px solid $neutral-600;
     background: $neutral-100;
     border-radius: 20px;
     transition: $trans;
@@ -100,7 +100,7 @@ select {
   }
   & .leaflet-bar a:hover {
     background: $accent-50;
-    border: 2px solid $accent-700;
+    border: 1px solid $accent-700;
     color: $accent-700;
     transform: scale(1.05);
   }
