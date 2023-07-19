@@ -2,6 +2,13 @@
   <router-view/>
 </template>
 
+<script>
+export default {
+  mounted() {
+    document.title = 'Written in Stone'; // Set the new title
+  },
+};
+</script>
 <style lang="scss">
 @import '@/styles/main.scss';
 @import '@/styles/type.scss';
