@@ -8,7 +8,8 @@
       <!-- Show selected marker details -->
       <div class="entry-header">
         <h4>{{ selectedMarker.properties.name }}</h4>
-        <div class="category-wrapper">
+        <div class="cats-wrap">
+          <div class="category-wrapper">
           <div class="cat-icon-wrapper">
             <img
               :src="getIconUrl(selectedMarker.properties.category)"
@@ -25,6 +26,7 @@
               class="cat-icon" />
           </div>
           <p class="label">{{ selectedMarker.properties.period }}</p>
+        </div>
         </div>
         <div class="tabs">
           <button

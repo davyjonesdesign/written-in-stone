@@ -1,3 +1,4 @@
+<!-- eslint-disable max-len -->
 <template>
   <div class="home">
     <div class="map-wrapper" :class="{ 'shifted': !showSidePanel }">
@@ -32,7 +33,10 @@
             class="deselect-marker-button"
             v-if="selectedMarker"
             @click="deselectMarker"
-          >&#10539;</button>
+          >
+          <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.19588 18.85619"><g id="c"><path d="m9.42808,18.85619l1.7678-1.7678-7.66035-7.6603L11.19588,1.76777l-1.7678-1.76777L0,9.42809l9.42808,9.4281Z" fill="#6e6562"/></g></svg>
+
+          </button>
       </div>
     </transition>
     <MarkLegend/>
@@ -153,4 +157,5 @@ export default {
 @import '@/styles/main.scss';
 @import '@/styles/sidepanel.scss';
 @import '@/styles/footer.scss';
+@import '@/styles/mediaQueries.scss';
 </style>
