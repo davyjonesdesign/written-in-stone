@@ -8,6 +8,9 @@
     } & .search-icon {
         right: 16px;
         top: 16px;
+    } & .search-results-wraps {
+        height: calc(100vh - 185px);
+        overflow: auto;
     } & .search-results {
         padding: 0 8px 8px;
     } & .results-item {

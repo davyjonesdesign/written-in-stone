@@ -111,53 +111,55 @@
           </div>
         </div>
       </div>
-      <ul class="search-results">
-        <li
-          class="search-results-item"
-          v-for="marker in filteredMarkers"
-          :key="marker.key"
-          @click="selectMarker(marker)"
-          @keydown.enter="selectMarker(marker)"
-          tabindex="0"
-        >
-          <div class="results-item">
-            <div class="results-item-img">
-              <img
-              :src="marker.properties.image"
-              alt="result item image"/>
-            </div>
-            <div class="results-item-content">
-              <h6>{{ marker.properties.name }}</h6>
-              <div class="category-wrapper list-cat">
-                <div class="cat-icon-wrapper">
-                  <img
-                    :src="getIconUrl(marker.properties.category)"
-                    alt="category icon"
-                    class="cat-icon" />
-                </div>
-                <p class="label">{{ marker.properties.category }}</p>
+      <div class="search-results-wraps">
+        <ul class="search-results">
+          <li
+            class="search-results-item"
+            v-for="marker in filteredMarkers"
+            :key="marker.key"
+            @click="selectMarker(marker)"
+            @keydown.enter="selectMarker(marker)"
+            tabindex="0"
+          >
+            <div class="results-item">
+              <div class="results-item-img">
+                <img
+                :src="marker.properties.image"
+                alt="result item image"/>
               </div>
-              <div class="category-wrapper list-cat">
-                <div class="cat-icon-wrapper">
-                  <img
-                    src='@/assets/icons/history.svg'
-                    alt="category icon"
-                    class="cat-icon" />
+              <div class="results-item-content">
+                <h6>{{ marker.properties.name }}</h6>
+                <div class="category-wrapper list-cat">
+                  <div class="cat-icon-wrapper">
+                    <img
+                      :src="getIconUrl(marker.properties.category)"
+                      alt="category icon"
+                      class="cat-icon" />
+                  </div>
+                  <p class="label">{{ marker.properties.category }}</p>
                 </div>
-                <p class="label">{{ marker.properties.period }}</p>
+                <div class="category-wrapper list-cat">
+                  <div class="cat-icon-wrapper">
+                    <img
+                      src='@/assets/icons/history.svg'
+                      alt="category icon"
+                      class="cat-icon" />
+                  </div>
+                  <p class="label">{{ marker.properties.period }}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="search-query" v-if="searchQuery">
-              <!-- <p class="search-query-text">"{{ getMatchedProperty(marker) }}"</p> -->
-              <p
-              v-if="searchQuery && getMatchedProperty(marker)"
-              class="search-query-text" v-html="getMatchedProperty(marker)"></p>
+            <div class="search-query" v-if="searchQuery">
+                <!-- <p class="search-query-text">"{{ getMatchedProperty(marker) }}"</p> -->
+                <p
+                v-if="searchQuery && getMatchedProperty(marker)"
+                class="search-query-text" v-html="getMatchedProperty(marker)"></p>
 
-            </div>
-          <div class="hr"></div>
-        </li>
-      </ul>
+              </div>
+            <div class="hr"></div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="footer">
       <p>Written in Stone</p>
