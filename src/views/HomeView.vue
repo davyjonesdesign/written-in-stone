@@ -54,6 +54,7 @@ import locations from '@/data/locations.geojson';
 import landmarkIcon from '@/assets/icons/landmark-pin.svg';
 import cityIcon from '@/assets/icons/city-pin.svg';
 import telIcon from '@/assets/icons/tel-pin.svg';
+import regIcon from '@/assets/icons/reg-pin.svg';
 import SidePanel from '@/components/SidePanel.vue';
 import MarkLegend from '@/components/MarkLegend.vue';
 
@@ -86,10 +87,10 @@ export default {
       if (marker && marker !== selectedMarker.value) {
         selectedMarker.value = marker;
         showSidePanel.value = false;
-        const [latitude, longitude] = marker.latLng;
-        const zoomFactor = 2 * (zoom.value / (zoom.value - 0.05));
-        const shiftedLongitude = longitude + zoomFactor;
-        mapCenter.value = [latitude, shiftedLongitude];
+        // const [latitude, longitude] = marker.latLng;
+        // const zoomFactor = 2 * (zoom.value / (zoom.value - 0.05));
+        // const shiftedLongitude = longitude + zoomFactor;
+        // mapCenter.value = [latitude, shiftedLongitude];
       } else {
         mapCenter.value = [31.7683, 35.2137];
         showSidePanel.value = true;
@@ -125,6 +126,9 @@ export default {
       }
       if (category === 'Tel') {
         return telIcon;
+      }
+      if (category === 'Region') {
+        return regIcon;
       }
       return null;
     };

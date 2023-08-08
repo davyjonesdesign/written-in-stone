@@ -52,6 +52,7 @@
           <ul class="entry-list">
             <li
             class="entry-list-item"
+            :class="{'scripture-tag': section.property === 'scripture'}"
             :key="item.id"
             :id="item.id"
             v-for="item in selectedMarker.properties[section.property]"
@@ -216,10 +217,11 @@ export default {
     sections() {
       return [
         { id: 'geography', title: 'Geography', property: 'geography' },
-        { id: 'history', title: 'History', property: 'history' },
-        { id: 'archaeology', title: 'Archaeology', property: 'archaeology' },
+        // { id: 'history', title: 'History', property: 'history' },
+        // { id: 'archaeology', title: 'Archaeology', property: 'archaeology' },
         { id: 'scripture', title: 'Scripture', property: 'scripture' },
-        { id: 'citations', title: 'Citations', property: 'citations' },
+        { id: 'related', title: 'Related Sites', property: 'related' },
+        { id: 'overview', title: 'Academic Overview', property: 'overview' },
       ];
     },
     filteredMarkers() {

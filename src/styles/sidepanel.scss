@@ -340,12 +340,20 @@
     padding: 0;
   }
 }
-ul.entry-list {
+.entry-list {
   list-style: none;
   list-style: outside url('@/assets/icons/arrow.svg');
-  padding: 0 0 0 16px;
+  padding: 0 0 0 0;
   & li {
-    padding: 0 0 0;
-    margin: 0 0 12px;
+    padding: 0 0 0 8px;
+    margin: 0 0 12px 16px;
+  } & .scripture-tag {
+    list-style: none;
+    line-height: 24px;
+    padding: 3px 12px;
+    margin: 3px;
+    background-color: #fdf8ed;
+    border-radius: 5px;
+    display: inline-block;
   }
 }

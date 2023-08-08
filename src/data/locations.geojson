@@ -13,8 +13,6 @@
         "period": "Iron Age",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Mount_Arbel%2C_Israel.JPG",
         "geography": ["Mount Arbel (Hebrew: הר ארבל, Har Arbel) is a mountain in The Lower Galilee near Tiberias in Israel, with high cliffs, views of Mount Hermon and the Golan Heights, a cave-fortress, and ruins of an ancient synagogue.", "Mount Arbel sits across from Mount Nitai; their cliffs were created as a result of the geological processes leading to the creation of the Jordan Rift Valley.", "There are four villages on the mountain: Kfar Zeitim, Arbel, Kfar Hittim, and Mitzpa.", "The peak, at 181 metres above sea level (380 metres above the surrounding area), dominates the surroundings (much of the area is below sea level), and from the lookout atop the mountain, almost all of the Galilee is visible including Safed, as well as Tiberias and most of the Sea of Galilee, and the slopes of the Golan Heights on the other side of the Sea."],
-        "history": ["Dug into the mountain are a number of documented Jewish cliff dwellings, expanded from natural caves, dating back to the Second Temple period.", "The inhabitants built ritual baths and water cisterns.", "At different times, the caves were fortified and connected by an internal staircase. Some Jews also lived in houses built on top of the mountain."],
-        "archaeology": ["The remains of an ancient Byzantine synagogue were explored at Horvat Arbel site by Charles Wilson in the 19th century as well as fortified caves which were connected by stairways and situated at a strategic point at the entrance to the valley facing the Sea of Galilee.[1]", "The early Byzantine synagogue discovered there consists of a columned hall entered via a doorway with molded jambs and lintel, and it had an apse in the southern wall, perhaps to contain Torah scrolls.", "The synagogue was first excavated by Kohl and Watzinger in 1905. The date of the construction of the synagogue has been debated by scholars.", "What is certain, however, is that the third century C.E. date that was originally proposed for this building based on architectural parallels and carved decorations is no longer accepted by scholars. Near the remnants of this ancient synagogue a moshav shittufi was established in 1949 by a group of Romanian Jews."],
         "scripture": ["Hosea 10:14 — It is possible that Arbel may be identical with that Beth-arbel which is mentioned in Hosea 10:14 as the site of a historic battle."],
         "citations": ["1. https://en.wikipedia.org/wiki/Mount_Arbel", "2. https://www.jewishvirtuallibrary.org/arbel"]
       }
@@ -30,9 +28,10 @@
         "category": "Tel",
         "period": "Iron Age I",
         "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tel_Be%27er_Sheva_Overview_2007041.JPG",
+        
         "geography": ["Tel Sheva (Hebrew: תל שבע) or Tel Be'er Sheva (Hebrew: תל באר שבע), also known as Tell es-Seba (تل السبع),[1] is an archaeological site in the Southern District of Israel, believed to be the site of the ancient biblical town of Beer-sheba.[2] The site lies east of modern Beersheba and west of the Bedouin town of Tel Sheva. Tel Sheva has been preserved and made accessible to visitors in the Tel Be'er Sheva National Park (Hebrew: גן לאומי תל באר שבע)."],
         "history": ["The earliest occupation at Beer-sheba during Iron Age I (Stratum IX) was represented only by seven large pits about 22 to 25 feet in diameter. Archaeologists believe that the entire settlement of this stratum covered about 2,990 sq. yards, approximately the area of half of a football field. It likely contained about 20 dwelling pits and 10 granaries and would have housed from 100 to 140 people. Stratum IX was abandoned then reused, new structures being added to the old. In Stratum VIII, which dates to the 11th century B.C.E., archaeologists found houses for the first time. Like Stratum IX, Stratum VIII was abandoned rather than destroyed. The pottery suggests that the same people who lived in Stratum VIII built Stratum VII at the end of the 11th century B.C.E., which comprised five domestic units in a possibly enclosed settlement.[6]"],
-        "archaeology": ["One of the most significant discoveries at Tel Beer-sheba is that of a horned altar, the first ever unearthed in Israel. Altars with horns at each of their four corners are mentioned frequently in the Bible (Lev. 4:7, 18, 25; Ex. 29:12, 30:2; 38:2; 1 Kings 1:50; 2:28). The altar was not found assembled in situ, but was discovered in secondary use, the stones of the altar been incorporated into a later-date wall.[9] As of 1975, there was an unresolved debate about the dating of the altar between Professor Aharoni and Professor Yigael Yadin of the Hebrew University. Professor Aharoni believed that the Beer-sheba altar was one of the altars which were dismantled as part of Hezekiah's religious reforms. Its stones were then reused in an 8th-century wall, and the wall itself was destroyed at the end of the 8th century, probably during Sennacherib's Judean campaign of 701 B.C. However, Professor Yadin dates this wall more than 100 years later than Professor Aharoni. According to Professor Yadin, the wall was probably destroyed about the time the Babylonians captured and destroyed Jerusalem (587 B.C.).[9] Professor Aharoni's interpretation would seem to strongly support a correlation with the biblical account of the cultic reform carried out by King Hezekiah, who ruled around 715–686 BCE (2 Kings 18:22).[9]"],
+
         "scripture": ["Beer-sheba is mentioned 33 times in the Hebrew Bible. It is often used when describing a border, such as 'From Dan to Beersheba'. It is also a significant center in the patriarchal narratives: Abraham dwelt at Beer-sheba (Genesis 22:19), Abraham and Abimelech entered a covenant at Beer-sheba (Genesis 21:32), and Abraham planted a tamarisk tree at Beer-sheba (Genesis 21:33). The Lord spoke to both Isaac and Jacob, Abraham's son and grandson respectively, at Beer-sheba (Genesis 26:23; 46:1). Beer-sheba is the site of two significant wells: Abraham's well at Beer-sheba was seized by Abimelech's men (Genesis 21:25), and Isaac's servants dug a well at Beer-sheba also (Genesis 26:25).","Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
       }
     },
@@ -40,17 +39,51 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [31.245036799419296, 34.840847271173715]
+        "coordinates": [31.7, 35.3]
       },
       "properties": {
-        "name": "Tel Be’er Sheba",
-        "category": "Tel",
+        "name": "Wilderness (of Judea)",
+        "category": "Landmark",
         "period": "Iron Age II",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tel_Be%27er_Sheva_Overview_2007041.JPG",
-        "geography": ["Tel Sheva (Hebrew: תל שבע) or Tel Be'er Sheva (Hebrew: תל באר שבע), also known as Tell es-Seba (تل السبع),[1] is an archaeological site in the Southern District of Israel, believed to be the site of the ancient biblical town of Beer-sheba.[2] The site lies east of modern Beersheba and west of the Bedouin town of Tel Sheva. Tel Sheva has been preserved and made accessible to visitors in the Tel Be'er Sheva National Park (Hebrew: גן לאומי תל באר שבע)."],
-        "history": ["The settlement of Beer-sheba was probably first fortified during the Iron IIA. Some archaeologists believe that Beer-sheba, which was on the southern border of the fledgling Israelite kingdom, was fortified by King Saul at the end of the 11th century BCE during wars against the Amalekites based upon a historical reading of the biblical account.[6] However, on the basis of interregional comparisons and recent radiocarbon evidence, this settlement phase probably started in the mid-10th century and ended in the late 9th century BCE.[7] The best preserved layout of the Iron II city may be reconstructed from Stratum II, which dates to the late 8th century BCE during the Iron IIB. At this time, the city was destroyed in a conflagration, possibly during the campaign of Sennacherib in 701 BCE. Reconstructed plans of the city suggest that Beer-sheba was planned as a coherent entity with areas for administrative structures and for dwellings incorporated into a single system. Fortifications included a casemate wall and a four-room city gate. Drains running under some of the streets conducted rain-water out of the city and a well-preserved water system of cisterns provided the inhabitants with water. The incorporation of the houses into the casemate wall suggests that its occupants were directly responsible for the city's defense and reflects the military and administrative function of the entire city. Archaeologists estimate around 350 people lived in the city of Beer-sheba during this period.[8]"],
-        "archaeology": ["One of the most significant discoveries at Tel Beer-sheba is that of a horned altar, the first ever unearthed in Israel. Altars with horns at each of their four corners are mentioned frequently in the Bible (Lev. 4:7, 18, 25; Ex. 29:12, 30:2; 38:2; 1 Kings 1:50; 2:28). The altar was not found assembled in situ, but was discovered in secondary use, the stones of the altar been incorporated into a later-date wall.[9] As of 1975, there was an unresolved debate about the dating of the altar between Professor Aharoni and Professor Yigael Yadin of the Hebrew University. Professor Aharoni believed that the Beer-sheba altar was one of the altars which were dismantled as part of Hezekiah's religious reforms. Its stones were then reused in an 8th-century wall, and the wall itself was destroyed at the end of the 8th century, probably during Sennacherib's Judean campaign of 701 B.C. However, Professor Yadin dates this wall more than 100 years later than Professor Aharoni. According to Professor Yadin, the wall was probably destroyed about the time the Babylonians captured and destroyed Jerusalem (587 B.C.).[9] Professor Aharoni's interpretation would seem to strongly support a correlation with the biblical account of the cultic reform carried out by King Hezekiah, who ruled around 715–686 BCE (2 Kings 18:22).[9]"],
-        "scripture": ["Beer-sheba is mentioned 33 times in the Hebrew Bible. It is often used when describing a border, such as 'From Dan to Beersheba'. It is also a significant center in the patriarchal narratives: Abraham dwelt at Beer-sheba (Genesis 22:19), Abraham and Abimelech entered a covenant at Beer-sheba (Genesis 21:32), and Abraham planted a tamarisk tree at Beer-sheba (Genesis 21:33). The Lord spoke to both Isaac and Jacob, Abraham's son and grandson respectively, at Beer-sheba (Genesis 26:23; 46:1). Beer-sheba is the site of two significant wells: Abraham's well at Beer-sheba was seized by Abimelech's men (Genesis 21:25), and Isaac's servants dug a well at Beer-sheba also (Genesis 26:25).","Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Judea_2_by_David_Shankbone.jpg/1024px-Judea_2_by_David_Shankbone.jpg",
+        "geography": [
+          "The Judean Wilderness is a desert in the West Bank and Israel that lies east of Jerusalem and descends to the Dead Sea.",
+          "The Judaean Desert stretches from the northeastern Negev to the east of Beit El, and is marked by natural terraces with escarpments. It ends in a steep escarpment dropping to the Dead Sea and the Jordan Valley.",
+          "The Judaean Desert is characterized by the topography of a plateau that ends in the east in a cliff." ,
+          "It is crossed by numerous wadis flowing from west to east and has many ravines, most of them deep, from 366 metres (1,201 ft) in the west to 183 metres (600 ft) in the east.",
+          "The Judaean Desert is an area with a special morphological structure along the east of the Judaean Mountains.",
+         "Rainfall in the Judea region varies from 400–500 millimetres (16–20 in) in the western hills, rising to 600 millimetres (24 in) around western Jerusalem (in central Judaea), falling back to 400 millimetres (16 in) in eastern Jerusalem and dropping to around 100 mm (3.9 in) in the eastern parts, due to a rainshadow effect.",
+          "The climate ranges from Mediterranean in the west and desert climate in the east, with a strip of steppe climate in the middle.",
+          "Rock hyraxes and Nubian Ibex live on the desert plateau and the Dead Sea cliffs. Until quite recently, there were Arabian leopards in the area, but they are now extinct in the area due to illegal hunting. For the last time, an Arabian leopard was spotted in Ein Feshkha.",
+          "Common birds in the area include the fan-tailed raven, blackstart, tristram's starling, apus, hirundo, Arabian babbler, wheatear, and sand partridge.",
+          "The Judaean Desert is home to a variety of reptiles, including venomous vipers like Echis coloratus and Atractaspis engaddensis (also known as the Israeli mole viper). The streams are home to various fish and amphibians."
+        ],
+        "scripture": [ "Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.12857, 35.78581]
+      },
+      "properties": {
+        "name": "Bashan",
+        "category": "Region",
+        "period": "Iron Age",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/%D8%A7%D9%84%D8%AC%D9%88%D9%84%D8%A7%D9%86-_%D8%B3%D9%88%D8%B1%D9%8A%D8%A7.jpg",
+        "geography": [
+          "Bashan (/ˈbeɪʃən/; Hebrew: הַבָּשָׁן, romanized: ha-Bashan; Latin: Basan or Basanitis)[1] is the ancient, biblical name used for the northernmost region of the Transjordan during the Iron Age.",
+          "It is situated in modern-day Syria. Its western part, nowadays known as the Golan Heights, was captured by Israel during the 1967 Six Day War and annexed in 1981.",
+          "It is the location of Ashtaroth Karnaim and Edrei (modern-day Daraa)."
+        ],
+        "scripture": [
+          "Genesis 14:5",
+          "Numbers 21:33-35",
+          "Deuteronomy 3:1-7",
+          "Joshua 13:29-31",
+          "Joshua 21:27"
+        ]
       }
     },
     {
@@ -66,8 +99,25 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/20180318-163729-city-of-david-march-2018.jpg",
         "geography": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."],
         "history": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."],
-        "archaeology": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."],
-        "scripture": [""]
+        "scripture": [
+          "Jeremiah 2:6", 
+          "Jeremiah 50:12", 
+          "Isaiah 35:1-10",
+          "Isaiah 40:3-5",
+          "Psalm 23:1-6",
+          "Psalm 63:1-11",
+          "Psalm 78:40-41",
+          "Psalm 105:37",
+          "Psalm 107:4-9",
+          "Psalm 107:33-35",
+          "Psalm 136:16",
+          "Psalm 143:1-12",
+          "Isaiah 35:1-10",
+          "Isaiah 40:3-5",
+          "Isaiah 41:17-20",
+          "Isaiah 43:19-21",
+          "Isaiah 48"
+        ]
       }
     }
   ]
