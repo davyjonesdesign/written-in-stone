@@ -70,29 +70,25 @@ export default {
   },
 
   setup() {
-    const zoom = ref(8);
+    const zoom = ref(7);
     const markers = ref([]);
     const showSidePanel = ref(true);
-    const mapCenter = ref([31.7683, 35.2137]);
-    const originalMapCenter = ref([31.7683, 35.2137]);
+    const mapCenter = ref([32, 37]);
     const selectedMarker = ref(null);
 
     const deselectMarker = () => {
       selectedMarker.value = null;
       // showSidePanel.value = true;
-      zoom.value = 8;
-      // mapCenter.value = originalMapCenter.value;
+      // zoom.value = 7;
     };
     const selectMarker = (marker) => {
       if (marker && marker !== selectedMarker.value) {
         selectedMarker.value = marker;
         showSidePanel.value = false;
-        // const [latitude, longitude] = marker.latLng;
-        // const zoomFactor = 2 * (zoom.value / (zoom.value - 0.05));
-        // const shiftedLongitude = longitude + zoomFactor;
-        // mapCenter.value = [latitude, shiftedLongitude];
+        const [latitude, longitude] = marker.latLng;
+        const shiftedLongitude = longitude + 2;
+        mapCenter.value = [latitude, shiftedLongitude];
       } else {
-        mapCenter.value = [31.7683, 35.2137];
         showSidePanel.value = true;
       }
     };
@@ -100,19 +96,27 @@ export default {
     const toggleSidePanel = () => {
       if (showSidePanel.value === null || showSidePanel.value === undefined) {
         showSidePanel.value = true;
+        zoom.value = 7;
+      } else {
+        showSidePanel.value = !showSidePanel.value;
+        zoom.value = 8;
         mapCenter.value = selectedMarker.value
           // eslint-disable-next-line max-len
           ? [selectedMarker.value.latLng[0], selectedMarker.value.latLng[1] + 2 * (zoom.value / (zoom.value - 0.05))]
-          : originalMapCenter.value;
-      } else {
-        showSidePanel.value = !showSidePanel.value;
+          : mapCenter.value;
         if (showSidePanel.value) {
-          mapCenter.value = originalMapCenter.value;
+          mapCenter.value = selectedMarker.value
+          // eslint-disable-next-line max-len
+            ? [selectedMarker.value.latLng[0], selectedMarker.value.latLng[1] + 2 * (zoom.value / (zoom.value))]
+            : mapCenter.value;
+          zoom.value = 7;
         } else {
+          // zoom.value = 8;
+
           mapCenter.value = selectedMarker.value
             // eslint-disable-next-line max-len
             ? [selectedMarker.value.latLng[0], selectedMarker.value.latLng[1] + 2 * (zoom.value / (zoom.value - 0.05))]
-            : originalMapCenter.value;
+            : mapCenter.value;
         }
       }
     };
@@ -151,7 +155,6 @@ export default {
       toggleSidePanel,
       deselectMarker,
       mapCenter,
-      originalMapCenter,
     };
   },
 };

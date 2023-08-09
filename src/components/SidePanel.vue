@@ -77,38 +77,40 @@
           <img src="@/assets/icons/magnifying.svg" alt="Search Icon" class="search-icon" />
         </div>
 
-        <!-- period dropdown -->
-        <div class="dropdown-box">
-          <select id="categorySelect" v-model="filterPeriod" class="dropdown-select">
-            <option value="">All Periods</option>
-            <option v-for="period in periods" :value="period" :key="period">
-              {{ period }}
-            </option>
-          </select>
-          <div  v-if="filterPeriod" @click="clearPeriod">
-            <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
+        <div class="filter-dropdowns">
+          <!-- period dropdown -->
+          <div class="dropdown-box period-box">
+            <select id="categorySelect" v-model="filterPeriod" class="dropdown-select">
+              <option value="">All Periods</option>
+              <option v-for="period in periods" :value="period" :key="period">
+                {{ period }}
+              </option>
+            </select>
+            <div  v-if="filterPeriod" @click="clearPeriod">
+              <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
+            </div>
+            <div class="arrow-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z" />
+              </svg>
+            </div>
           </div>
-          <div class="arrow-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M7 10l5 5 5-5z" />
-            </svg>
-          </div>
-        </div>
-        <!-- category dropdown -->
-        <div class="dropdown-box">
-          <select id="categorySelect" v-model="filterCategory" class="dropdown-select">
-            <option value="">All Categories</option>
-            <option v-for="category in categories" :value="category" :key="category">
-              {{ category }}
-            </option>
-          </select>
-          <div  v-if="filterCategory" @click="clearCategory">
-            <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
-          </div>
-          <div class="arrow-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M7 10l5 5 5-5z" />
-            </svg>
+          <!-- category dropdown -->
+          <div class="dropdown-box">
+            <select id="categorySelect" v-model="filterCategory" class="dropdown-select">
+              <option value="">All Categories</option>
+              <option v-for="category in categories" :value="category" :key="category">
+                {{ category }}
+              </option>
+            </select>
+            <div  v-if="filterCategory" @click="clearCategory">
+              <img src="@/assets/icons/x.svg" alt="clear Icon" class="clear-icon"/>
+            </div>
+            <div class="arrow-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -173,6 +175,7 @@ import landmarkIcon from '@/assets/icons/landmark.svg';
 import cityIcon from '@/assets/icons/city.svg';
 import telIcon from '@/assets/icons/tel.svg';
 import histIcon from '@/assets/icons/history.svg';
+import regIcon from '@/assets/icons/region.svg';
 
 export default {
   name: 'SidePanel',
@@ -204,6 +207,9 @@ export default {
       }
       if (category === 'Tel') {
         return telIcon;
+      }
+      if (category === 'Region') {
+        return regIcon;
       }
       return histIcon;
     };

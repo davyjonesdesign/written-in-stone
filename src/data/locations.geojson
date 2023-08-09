@@ -14,7 +14,9 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Mount_Arbel%2C_Israel.JPG",
         "geography": ["Mount Arbel (Hebrew: הר ארבל, Har Arbel) is a mountain in The Lower Galilee near Tiberias in Israel, with high cliffs, views of Mount Hermon and the Golan Heights, a cave-fortress, and ruins of an ancient synagogue.", "Mount Arbel sits across from Mount Nitai; their cliffs were created as a result of the geological processes leading to the creation of the Jordan Rift Valley.", "There are four villages on the mountain: Kfar Zeitim, Arbel, Kfar Hittim, and Mitzpa.", "The peak, at 181 metres above sea level (380 metres above the surrounding area), dominates the surroundings (much of the area is below sea level), and from the lookout atop the mountain, almost all of the Galilee is visible including Safed, as well as Tiberias and most of the Sea of Galilee, and the slopes of the Golan Heights on the other side of the Sea."],
         "scripture": ["Hosea 10:14 — It is possible that Arbel may be identical with that Beth-arbel which is mentioned in Hosea 10:14 as the site of a historic battle."],
-        "citations": ["1. https://en.wikipedia.org/wiki/Mount_Arbel", "2. https://www.jewishvirtuallibrary.org/arbel"]
+        "citations": ["1. https://en.wikipedia.org/wiki/Mount_Arbel", "2. https://www.jewishvirtuallibrary.org/arbel"],
+        "overview": ["To be developed"],
+        "related": ["To be developed"]
       }
     },
     {
@@ -32,8 +34,11 @@
         "geography": ["Tel Sheva (Hebrew: תל שבע) or Tel Be'er Sheva (Hebrew: תל באר שבע), also known as Tell es-Seba (تل السبع),[1] is an archaeological site in the Southern District of Israel, believed to be the site of the ancient biblical town of Beer-sheba.[2] The site lies east of modern Beersheba and west of the Bedouin town of Tel Sheva. Tel Sheva has been preserved and made accessible to visitors in the Tel Be'er Sheva National Park (Hebrew: גן לאומי תל באר שבע)."],
         "history": ["The earliest occupation at Beer-sheba during Iron Age I (Stratum IX) was represented only by seven large pits about 22 to 25 feet in diameter. Archaeologists believe that the entire settlement of this stratum covered about 2,990 sq. yards, approximately the area of half of a football field. It likely contained about 20 dwelling pits and 10 granaries and would have housed from 100 to 140 people. Stratum IX was abandoned then reused, new structures being added to the old. In Stratum VIII, which dates to the 11th century B.C.E., archaeologists found houses for the first time. Like Stratum IX, Stratum VIII was abandoned rather than destroyed. The pottery suggests that the same people who lived in Stratum VIII built Stratum VII at the end of the 11th century B.C.E., which comprised five domestic units in a possibly enclosed settlement.[6]"],
 
-        "scripture": ["Beer-sheba is mentioned 33 times in the Hebrew Bible. It is often used when describing a border, such as 'From Dan to Beersheba'. It is also a significant center in the patriarchal narratives: Abraham dwelt at Beer-sheba (Genesis 22:19), Abraham and Abimelech entered a covenant at Beer-sheba (Genesis 21:32), and Abraham planted a tamarisk tree at Beer-sheba (Genesis 21:33). The Lord spoke to both Isaac and Jacob, Abraham's son and grandson respectively, at Beer-sheba (Genesis 26:23; 46:1). Beer-sheba is the site of two significant wells: Abraham's well at Beer-sheba was seized by Abimelech's men (Genesis 21:25), and Isaac's servants dug a well at Beer-sheba also (Genesis 26:25).","Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
-      }
+        "scripture": ["Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
+      },
+      "overview": "To be developed",
+      "related": "To be developed"
+      
     },
     {
       "type": "Feature",
@@ -58,7 +63,27 @@
           "Common birds in the area include the fan-tailed raven, blackstart, tristram's starling, apus, hirundo, Arabian babbler, wheatear, and sand partridge.",
           "The Judaean Desert is home to a variety of reptiles, including venomous vipers like Echis coloratus and Atractaspis engaddensis (also known as the Israeli mole viper). The streams are home to various fish and amphibians."
         ],
-        "scripture": [ "Genesis 21:25", "Genesis 22:19","Genesis 21:32","Genesis 21:32-33", "Genesis 26:23-25", "Genesis 46:1"]
+        "scripture": [ 
+          "Jeremiah 2:6", 
+          "Jeremiah 50:12", 
+          "Isaiah 35:1-10",
+          "Isaiah 40:3-5",
+          "Psalm 23:1-6",
+          "Psalm 63:1-11",
+          "Psalm 78:40-41",
+          "Psalm 105:37",
+          "Psalm 107:4-9",
+          "Psalm 107:33-35",
+          "Psalm 136:16",
+          "Psalm 143:1-12",
+          "Isaiah 35:1-10",
+          "Isaiah 40:3-5",
+          "Isaiah 41:17-20",
+          "Isaiah 43:19-21",
+          "Isaiah 48"
+        ],
+        "overview": ["To be developed"],
+        "related": ["To be developed"]
       }
     },
     {
@@ -83,7 +108,9 @@
           "Deuteronomy 3:1-7",
           "Joshua 13:29-31",
           "Joshua 21:27"
-        ]
+        ],
+        "overview": ["To be developed"],
+        "related": ["To be developed"]
       }
     },
     {
@@ -98,26 +125,11 @@
         "period": "Iron Age",
         "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/20180318-163729-city-of-david-march-2018.jpg",
         "geography": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."],
-        "history": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa risus adipiscing amet eget amet etiam pellentesque. Sit nam sit vitae etiam. Neque, vitae, lectus in tortor et cursus. Orci sed arcu, maecenas ligula tristique. Natoque purus diam, arcu scelerisque feugiat faucibus ultricies faucibus lacus. Imperdiet egestas urna, donec tristique non quisque. Integer augue mi praesent orci faucibus. Nunc, sit morbi fermentum lacus at. At turpis eu, id nam in quam semper amet. A massa mauris id quisque. Rutrum pellentesque sit odio volutpat. Natoque volutpat ac iaculis augue curabitur et arcu duis. Porttitor tortor, risus nibh nibh velit bibendum sollicitudin in volutpat."],
         "scripture": [
-          "Jeremiah 2:6", 
-          "Jeremiah 50:12", 
-          "Isaiah 35:1-10",
-          "Isaiah 40:3-5",
-          "Psalm 23:1-6",
-          "Psalm 63:1-11",
-          "Psalm 78:40-41",
-          "Psalm 105:37",
-          "Psalm 107:4-9",
-          "Psalm 107:33-35",
-          "Psalm 136:16",
-          "Psalm 143:1-12",
-          "Isaiah 35:1-10",
-          "Isaiah 40:3-5",
-          "Isaiah 41:17-20",
-          "Isaiah 43:19-21",
-          "Isaiah 48"
-        ]
+         
+        ],
+        "overview": ["To be developed"],
+        "related": ["To be developed"]
       }
     }
   ]
